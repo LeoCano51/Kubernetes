@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cpu-demo
+spec:
+  containers:
+    - name: cpu-demo-container
+      image: nginx
+      resources:
+        requests:
+          cpu: "500m" # asks for 0.5 CPU
+        limits:
+          cpu: "1" # Limits to 1 CPU
