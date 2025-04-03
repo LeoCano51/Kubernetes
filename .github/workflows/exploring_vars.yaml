@@ -1,19 +1,18 @@
 name: Greeting on variable day
 
 on: 
-  workflow_dispatch
+  workflow_dispatch:
 
 env:
   DAY_OF_WEEK: Monday
 
 jobs: 
-  greeting job: 
-    runs-on: ubuntu-lastest
+  greeting_job: 
+    runs-on: ubuntu-latest
     env: 
       Greeting: Hello
     steps:
-      - name: ¨say hello Leo it´s monday¨
-        run: echo ¨$Grreting $First_Name. Today is $DAY_OF_WEEK!¨
+      - name: "Say hello Leo, it's Monday"
+        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
         env: 
           First_Name: Leo
-        
